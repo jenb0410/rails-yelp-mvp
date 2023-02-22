@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>All Restaurants</h1>
+
+  <%# <%= render "restaurants/list", restaurants: @restaurants %>
+
+  <% if @restaurants.empty? %>
+  <h5>Sorry we have no restaurants yet</h5>
+  <% else %>
+      <ul>
+      <% @restaurants.each do |restaurant| %>
+        <li>Name: <%= link_to restaurant.name, restaurant_path(restaurant)  %></li>
+      <% end %>
+    </ul>
+  <% end %> %> %>
+
+  <%= link_to "Add new restaurant", new_restaurant_path %>
+</div>
